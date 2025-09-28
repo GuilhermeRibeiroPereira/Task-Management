@@ -10,7 +10,7 @@ builder.Services.AddOpenApi();
 
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source=tasks.db"));
+   options.UseSqlite("Data Source=tasks.db"));
 
 
 var app = builder.Build();
@@ -29,3 +29,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { } // Make the Program class public using a partial class, for testing purposes
