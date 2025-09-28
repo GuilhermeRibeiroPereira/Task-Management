@@ -61,7 +61,7 @@ public class TasksController : ControllerBase
         }
         catch (DbUpdateConcurrencyException)
         {
-            if (TaskExists(id))
+            if (!TaskExists(id))
             {
                 return NotFound(); // Task no longer exists (someone else deleted it), return HTTP 404
             }
