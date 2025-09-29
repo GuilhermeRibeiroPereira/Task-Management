@@ -5,10 +5,16 @@ A simple .NET 9 Web API to manage tasks with CRUD operations. Designed to showca
 ## Features
 - CRUD endpoints for tasks (Title, Description, Status, Priority)
 - SQLite database with Microsoft EF Core Migrations
+- Returns meaningful HTTP status codes (400, 404, 201, etc.).
+- Unit & integration testing:
+    - Tests for validation rules (required fields, title length, priority invariants).
+    - Tests for API endpoints with in-memory database.
+- CI/CD: GitHub Actions pipeline runs build + tests on each commit.
 
 ## Technologies
 - .NET 9 SDK
 - SQLite
+- xUnit
 
 ## Run the API
 ```sh
