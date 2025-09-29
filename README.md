@@ -41,3 +41,14 @@ dotnet test
 ```sh
 dotnet test --filter "Test_Name"
 ```
+
+## CI/CD Workflow
+
+This project includes a GitHub Actions workflow that runs automatically on every push to main:
+- Checkout, pulls the repository code
+- Setup .NET 9 SDK
+- Restore dependencies, dotnet restore
+- Build, dotnet build
+- Run tests, dotnet test
+
+View results in the Actions tab on GitHub
