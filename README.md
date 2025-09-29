@@ -7,9 +7,8 @@ A simple .NET 9 Web API to manage tasks with CRUD operations. Designed to showca
 - SQLite database with Microsoft EF Core Migrations
 
 ## Technologies
-- Required
-    - .NET 9 SDK
-    - SQLite
+- .NET 9 SDK
+- SQLite
 
 ## Run the API
 ```sh
@@ -19,7 +18,7 @@ dotnet run
 
 Default URL: http://localhost:5232
 
-Open Swagger UI (for manual interactive testing): http://localhost:5232/swagger
+Swagger UI (for manual interactive testing): http://localhost:5232/swagger
 
 
 ## Database
@@ -31,4 +30,14 @@ dotnet ef database update
 ```
 
 ## Testing
-TODO
+- Framework used: xUnit
+- Unit and integration tests at TaskManagerApi.Tests
+- Run tests:
+```sh
+cd TaskManagerApi.Tests
+dotnet test
+```
+- Run individual tests:
+```sh
+dotnet test --filter "Test_Name"
+```
